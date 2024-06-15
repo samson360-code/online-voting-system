@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/candidatestyle.css}">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <div class="nav-buttons" th:if="${isSession}">
+                <form action="/logout" method="get">
+                    <button class="btn"> log out</button>
+                </form>
+                <button class="btn" ><a th:href="@{/index}">Go to Home Page</a></button>
+            </div>
+            <h1>List Candidate Available</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Candidate Img</th>
+                        <th>Candidate ID</th>
+                        <th>Candidate FName</th>
+                        <th>Candidate LName</th>
+                        <th>Candidate BIO</th>
+                        <th>VotedBY</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody th:if="${candidates}">
+                    <tr th:each="candidate:${candidates}">
+                        <td id="timgcntr"> <img id="tableimg" th:src="${candidate.getimage()}" alt=""></td>
+                        <td th:text="${candidate.getcandId()}"></td>
+                        <td th:text="${candidate.getfname()}"></td>
+                        <td th:text="${candidate.getlname()}"></td>
+                        <td th:text="${candidate.getbio()}" id="biog">Candidate BIO</td>
+                        <td th:text="${candidate.getvotedBy()}" >VotedBY</td>
+                        <td>
+                            <form method="post" action="/update">
+                            <input type="hidden" name="EditID" th:value="${candidate.getcandId()}">
+                            <button class="button manipulate" name="delete"><span class="edit-sign">&#9998;</span>Edit</button>
+                        </form>
+                        </td>
+                        <td>
+                            <form method="post" action="/delete">
+                                <input type="hidden" name="deleteID" th:value="${candidate.getcandId()}">
+                                <button class="button manipulate" name="delete"><span class="delete-sign">&#10060;</span>Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="header">
+            <h1>
+                post A new candidate
+            </h1>
+            <div th:if="${candidate}">
+                <p th:text="${candidate}"></p>
+            </div>
+            <form th:object="${editedCand}" th:action="${editedCand!= null ? '/editcan' : '/postCandidate'}" method="post" class="candidateForm">
+                <div>
+                    <label for="">First name:</label>
+                    <input type="text" name="fname" placeholder="" id="" th:value="${editedCand != null ? editedCand.getfname() : ''}">
+                </div>
+                <div>
+                    <label for="">last name:</label>
+                    <input type="text" name="lname" placeholder="" id="" th:value="${editedCand != null ? editedCand.getlname() : ''}">
+                </div>
+                <div>
+                    <label for="">Candidate ID:</label>
+                    <input type="text" name="candId" placeholder="" id="" th:value="${editedCand != null ? editedCand.getcandId() : ''}" th:readonly="${editedCand != null}">
+                </div>
+                <div>
+                    <label for="">Candidate Biography:</label>
+                    <textarea id="bio" name="bio" rows="4" cols="50" minlength="100"  th:text="${editedCand != null ? editedCand.getbio() : ''}"></textarea>
+                </div>
+                <div>
+                    <label for="">Candidate's best quote:</label>
+                    <textarea id="qoute" name="quote" rows="4" cols="50" minlength="50" th:text="${editedCand != null ? editedCand.getquote() : ''}"></textarea>
+                </div>
+                <div>
+                    <label for="">Profile Image:</label>
+                    <input type="file" name="image" placeholder="image" id="image" accept="image/*" th:value="${editedCand != null ? editedCand.getimage() : ''}">
+                </div>
+                <button>post</button>
+            </form>
+    </main>
+    <script th:src="@{/candidateform.js}"></script>
+</body>
+
+</html>

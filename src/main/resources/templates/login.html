@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" th:href="@{/index.css}">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="main">
+            <div class="form">
+                <form action="/register" class="acc create" method="post" id="regacc">
+                    <h1>Register</h1>
+                    <div>
+                        <label for="fname">
+                            first name:
+                        </label>
+                        <input type="text" placeholder=" first name:" name="fname">
+                    </div>
+                    <div>
+                        <label for="lname">
+                            Last name:
+                        </label>
+                        <input type="text" placeholder="last name:" name="lname">
+                    </div>
+                    <div>
+                        <label for="fname">
+                            Email add:
+                        </label>
+                        <input type="email" placeholder="email:" name="email">
+                    </div>
+                    <div>
+                        <label for="fname">
+                            Phone add:
+                        </label>
+                        <input type="phone" placeholder="phone:" name="phone">
+                    </div>
+                    <div>
+                        <label for="id">
+                            Id Number:
+                        </label>
+                        <input type="text" placeholder="Id Number:" name="id">
+                    </div>
+                    <div>
+                        <label for="id">
+                            Password:
+                        </label>
+                        <input type="password" placeholder="password:" name="password">
+                    </div>
+                    <div>
+                        <label for="id">
+                            Confirm Password:
+                        </label>
+                        <input type="password" placeholder="confirm password:" name="cpassword">
+                    </div>
+                    <button id="sign-up">sign up</button>
+                </form>
+                <form action="/signIn" method="post" class="acc created ">
+                    <div class="user"><i class="fa fa-user" aria-hidden="true"></i></div>
+                  
+                    <div th:if="${message}" class="response">
+                        <p th:text="${message}"></p>
+                    </div>
+                    <div>
+                        <label for="fname">
+                            ID number:
+                        </label>
+                        <input type="text" placeholder="Id Number:" name="IdNumber">
+                    </div>
+                    <div>
+                        <label for="fname">Password:
+                        </label>
+                        <input type="password" placeholder="Password:" name="password">
+                    </div>
+                    <button>sign in </button>
+                </form>
+            </div>
+            <div class="welcome">
+                <div class="wrapper signup">
+                    <div>
+                        <h1>WELCOME BACK</h1>
+                        <P>
+                            To keep connected with us please
+                            login with your personal info
+                        </P>
+                    </div>
+                    <button id="signin"> signin</button>
+                </div>
+                <div class="wrapper signin">
+                    <h1> Hello, Voter!</h1>
+                    <p> It is time you to vote your leader .
+                        <br> Enter your votkey in provided place
+                    </p>
+                    <button id="signup"> sign up</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="Regstered">
+        <div class="regcntr">
+            <i class="fas fa-check"></i>
+            <h1>Registered</h1>
+            <p id="key" >
+             <p>
+                <p>succesfully registerd </p>
+            </p>
+            <button>ok!</button>
+        </div>
+        <div class="regcntr  alreaady">
+            <i class="fas fa-check"></i>
+            <h1>Registered</h1>
+            <p>
+                Dr. Name <br>
+                you are already Registered
+            </p>
+            <button >signIn!</button>
+        </div>
+        <div class="error regcntr">
+            <i class="fas fa-error"></i>
+            <h1>ERROR!</h1>
+            <div class="error-text">
+                Consider the following condition
+                <ul>
+                    <li>proper fname and last name</li>
+                    <li>valid email</li>
+                    <li>password length maximum 6 letter and digit only</li>
+                    <li>confirm password properly</li>
+                    <li> proper id maximum length 6</li>
+                    <li>proper phone Number</li>
+                </ul>
+            </div>
+            <p>enter valid input!</p>
+            <button>ok!</button>
+ </div>
+    </section>
+</body>
+<script th:src="@{/login.js}"></script>
+
+</html>

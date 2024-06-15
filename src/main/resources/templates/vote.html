@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&amp;family=Ubuntu:ital,wght@0,300;0,400;0,700;1,500&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/vote.css}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <figure>
+                <img th:src="@{/image/logo2.png}" alt="">
+            </figure>
+            <h2>
+                Ethiopia Election Board
+            </h2>
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="#">home</a></li>
+                <li> <a href="#">Announcment</a></li>
+                <li> <a href="#">contact us</a></li>
+                <li> <a href="#">About us</a></li>
+            </ul>
+            <div>
+                <button> login</button>
+                <button>signin</button>
+            </div>
+        </nav>
+        <section class="headtext">
+            <div>
+                <h1 class="topic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h1>
+                <p>udantium quia vel hic a est aperiam? Repellendus inventore ab neque dolorum? Aliquam in corrupti
+                    totam fugit</p>
+            </div>
+
+        </section>
+    </header>
+    <main>
+        <section class="sec-one">
+            <div class="textone">
+                <h1>
+                    hello , voter
+                </h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio laudantium ut non aperiam
+                    tempora
+                    sit incidunt! Voluptatem, temporibus perferendis impedit nulla accusantium iste officia. Quaerat
+                    alias
+                    quibusdam et nulla numquam.</p>
+            </div>
+            <div>
+                <img th:src="@{/image/vote1.png}" alt="">
+            </div>
+        </section>
+
+
+
+        <section class="sec-two">
+            <h1 class="candidates">:: candidates</h1>
+            <div class="container">
+                <div class="card">
+                    <img th:src="@{/image/abiy.jpg}" alt="">
+                    <div class="card__head">
+                        Abiy Ahemed
+                        <p class="description one">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description two">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description three">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description four">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description five">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores <a href="">more</a></p>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img th:src="@{/image/jawar.jpg}" alt="">
+                    <div class="card__head"> Jawar Mohamd
+                        <p class="description one">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description two">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description three">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description four">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description five">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!. <a href="">more</a></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img th:src="@{/image/download.webp}" alt="">
+                    <div class="card__head">Getachew Reda
+                        <p class="description one">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description two">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description three">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description four">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description five">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!. <a href="">more</a> </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img th:src="@{/image/lidetu.jpg}" alt="">
+                    <div class="card__head">Lidetu Ayelew
+                        <p class="description one">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description two">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description three">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description four">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description five">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!. <a href="">more</a> </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img th:src="@{/image/esk.jpg}" alt="">
+                    <div class="card__head">Eskinder nega
+                        <p class="description one">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description two">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description three">Lorem ipsum dolor sit,ame consectetur adipisicing elit. Eiu
+                            consectetur ad, minima porro debitis cum assumenda, provident, perspiciatis </p>
+                        <p class="description four">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!doloremque. </p>
+                        <p class="description five">vitae aspernaturmaioresiste aut quiprovident, perspiciatis
+                            doloremque. Architecto accusantium reprehenderit dolor asperiores!
+                            <a href="">more</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="secthree">
+            <div class="wrapper">
+                <div>
+                    <h1> 10,000+ of voter registerd.</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam necessitatibus molestiae fuga
+                        adipisci, iusto quos architecto laudantium porro sint obcaecati. Ducimus molestias est ipsam
+                        officia sequi, rerum cupiditate laudantium minus.
+                    </p>
+                </div>
+                <div class="stars">
+                    <div>
+
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                        <i class="fas fa-long-arrow-alt-down"></i>
+
+                        place your vote
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                        <i class="fas fa-long-arrow-alt-down"></i>
+
+                        </p>
+                    </div>
+                    <div id="vote">
+                        <p> VOTE NOW
+                        </p>
+                    </div>
+                    <div>
+
+                        <i class="fas fa-long-arrow-alt-up"></i>
+                        <i class="fas fa-long-arrow-alt-up"></i>
+                        <i class="fas fa-long-arrow-alt-up"></i>
+                        <i class="fas fa-long-arrow-alt-up"></i>
+                        <span> choose your leader</span>
+                        <i class="fas fa-long-arrow-alt-up"></i>
+                        <i class="fas fa-long-arrow-alt-up"></i>
+                        <i class="fas fa-long-arrow-alt-up"></i>
+                        <i class="fas fa-long-arrow-alt-up"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <div>
+                    <div>
+                        <img th:src="@{/image/abiy.jpg}" alt="">
+                        <span>
+                            <h5>
+                                Abiy Ahemed
+                            </h5>
+                            <h6>
+                                poltician
+                            </h6>
+                        </span>
+                    </div>
+                    <p>
+                        "orem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloribus at blanditiis veritatis? Necessitatibus nesciunt alias sed.!"
+                    </p>
+                </div>
+                <div>
+                    <div>
+                        <img th:src="@{/image/jawar.jpg}" alt="">
+                        <span>
+                            <h5>
+                                Jawar Mohamd
+                            </h5>
+                            <h6>
+                                poltician
+                            </h6>
+                        </span>
+                    </div>
+
+                    <p>
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloribus at blanditiis veritatis? Necessitatibus nesciunt alias sed."
+                    </p>
+                </div>
+                <div>
+                    <div>
+                        <img th:src="@{/image/lidetu.jpg}" alt="">
+                        <span>
+                            <h5>
+                                Lidetu Ayelew
+                            </h5>
+                            <h6>
+                                poltician
+                            </h6>
+                        </span>
+                    </div>
+                    <p>
+                        "orem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloribus at blanditiis veritatis? Necessitatibus nesciunt alias sed.!"
+                    </p>
+                </div>
+            </div>
+            <div class="comment">
+                <div>
+                    <div>
+                        <img th:src="@{/image/esk.jpg}" alt="">
+                        <span>
+                            <h5>
+                                Abiy Ahemed
+                            </h5>
+                            <h6>
+                                poltician
+                            </h6>
+                        </span>
+                    </div>
+                    <p>
+                        "orem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloribus at blanditiis veritatis? Necessitatibus nesciunt alias sed.!"
+                    </p>
+                </div>
+                <div>
+                    <div>
+                        <img th:src="@{/image/download.webp}" alt="">
+                        <span>
+                            <h5>
+                                Getachew Reda
+                            </h5>
+                            <h6>
+                                poltician
+                            </h6>
+                        </span>
+                    </div>
+
+                    <p>
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloribus at blanditiis veritatis? Necessitatibus nesciunt alias sed."
+                    </p>
+                </div>
+                <div>
+                    <div>
+                        <img th:src="@{/image/lidetu.jpg}" alt="">
+                        <span>
+                            <h5>
+                                Lidetu Ayelew
+                            </h5>
+                            <h6>
+                                poltician
+                            </h6>
+                        </span>
+                    </div>
+                    <p>
+                        "orem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloribus at blanditiis veritatis? Necessitatibus nesciunt alias sed.!"
+                    </p>
+                </div>
+            </div>
+            <section class="tovote">
+                <div class="voting-section">
+                    <i class="fas fa-times"></i>
+                    <h2>Vote for Your Favorite Candidate</h2>
+                    <div class="candid">
+                        <figcaption>
+                            <img th:src="@{/image/abiy.jpg}" alt="Candidate 1">
+                            <div class="descript">
+                                <h3>Abiy Ahmed</h3>
+                                <p>Description of Candidate 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </figcaption>
+
+                        <button class="vote-btn">vote</button>
+                    </div>
+                    <div class="candid">
+                        <figcaption>
+                            <img th:src="@{/image/esk.jpg}" alt="Candidate 1">
+                            <div class="descript">
+                                <h3>Eskinder Nega</h3>
+                                <p>Description of Candidate 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </figcaption>
+                        <button class="vote-btn">Vote</button>
+
+                        </a>
+                    </div>
+                    <div class="candid">
+                        <figcaption>
+                            <img th:src="@{/image/jawar.jpg}" alt="Candidate 1">
+                            <div class="descript">
+                                <h3>Jawar Mohamd</h3>
+                                <p>Description of Candidate 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </figcaption>
+
+                        <button class="vote-btn">Vote</button>
+                    </div>
+                    <div class="candid">
+                        <figcaption>
+                            <img th:src="@{/image/lidetu.jpg}" alt="Candidate 1">
+                            <div class="descript">
+                                <h3>Lidetu Ayalew</h3>
+                                <p>Description of Candidate 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </figcaption>
+                        <button class="vote-btn">Vote</button>
+                    </div>
+                    <div class="candid">
+                        <figcaption>
+                            <img th:src="@{/image/download.webp}" alt="Candidate 1">
+                            <div class="descript">
+                                <h3>Getachew Reda</h3>
+                                <p>Description of Candidate 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </figcaption>
+                        <button class="vote-btn">Vote</button>
+                    </div> 
+                    <button id="done">Done</button>
+                   
+                </div>
+                <div class="finished">
+                    <div class="continer">
+                        <div class="box">
+                            <article id="cardd">
+                                card
+                            </article>
+                            <div id="top">top</div>
+                            <div id="right"></div>
+                            <div id="bottom"></div>
+                            <div id="left"></div>
+                            <div id="back"></div>
+                            <div id="front">            <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="laststep">
+                    <h1> are you Sure ?
+                        you are going to choose <span  id="tobe"></span>
+                        as your leader for next five year
+                    </h1>
+                    <div></div>
+                    <button id="confirm">confirm</button> <button id="cancel">cancel</button>
+                </div>
+            
+            </section>
+    </main>
+    <footer>
+        <div class="flexer">
+            <div>
+                <img th:src="@{/image/footer.png}" alt="">
+            </div>
+            <ul>
+                <p> Product
+                </p>
+                <li><a href=""> Overview
+                    </a></li>
+                <li><a href=""> Pricing
+                    </a></li>
+                <li><a href=""> Marketplace
+                    </a></li>
+                <li><a href=""> Features
+                    </a></li>
+                <li><a href=""> Integrations
+                    </a></li>
+            </ul>
+            <ul>
+                <p> Company
+                </p>
+
+                <li><a href=""> About
+                    </a></li>
+                <li><a href=""> Team
+                    </a></li>
+                <li><a href=""> Blog
+                    </a></li>
+                <li><a href=""> Careers
+                    </a></li>
+            </ul>
+            <ul>
+                <p> Connect
+                </p>
+                <li><a href=""> Contact
+                    </a></li>
+                <li><a href=""> Newsletter
+                    </a></li>
+                <li><a href=""> LinkedIn
+                    </a></li>
+
+            </ul>
+        </div>
+    </footer>
+</body>
+<script th:src="@{/vote.js}"></script>
+
+</html>
